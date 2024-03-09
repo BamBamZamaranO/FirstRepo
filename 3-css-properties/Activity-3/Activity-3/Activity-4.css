@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.background {
+    /* width: 22%; */
+    margin-left: 45%;
+    /* margin-top: 50px; */
+    position: relative;
+    top: 20px;
+}
+
+header {
+    background-image: url(./background.jpg);
+    height: 120px;
+    margin-bottom: 100px;
+    width: 100%;
+}
+
+/* .logo {
+    position: relative;
+    top: 20px;
+    left: 45%; */
+/* } */
+
+.paragraph-border {
+    border-top: 1px dotted black;
+    border-bottom: 1px solid black;
+    padding: 10px 0px 10px 0px;
+}
+
+.big-card {
+    width: 600px;
+    padding: 15px;
+}
+
+body {
+    background-color: grey;
+    height: 100%;
+}
+
+span {
+    color: red;
+}
+
+h3 {
+    padding-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding-bottom: 10px;
+}
+
+h6 {
+    padding-bottom: 10px;
+}
+
+.small-card {
+    padding: 15px;
+    width: 220px;
+    position: relative;
+    /* margin-top: 200px;*/
+    /* bottom: 100px; */
+    bottom: 100px; 
+}
+
+.small-img {
+    display: block;
+    padding: 10px;
+}
+
+div {
+    background-color: white;
+    display: inline-block;
+    /* margin-top: 150px; */
+}
+
+main {
+    width: 900px;
+    left: 15%;
+    position: relative;
+    display: inline;
+    /* padding-top: 350px; */
+}
+
+.move {
+    position: relative;
+    bottom: 350px;
+}
+
+/* footer {
+
+} */
