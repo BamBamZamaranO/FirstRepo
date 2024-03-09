@@ -1,0 +1,22 @@
+div {
+    border: 1px solid black;
+    text-align: center;
+    background-color: rgb(162, 221, 200);
+    width: 200px;
+    box-shadow: 10px 5px 5px rgb(141, 129, 129);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+}
+
+img {
+   border: 1px solid black ;
+   /* margin-top: -12%; */
+   box-shadow: 5px 5px 5px rgb(141, 129, 129);
+   position: absolute;
+   top: -50px;
+}
+
+form {
+    position: relative;
+}
