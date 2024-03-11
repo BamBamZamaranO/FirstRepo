@@ -4,26 +4,17 @@
     box-sizing: border-box;
     font-family: sans-serif;
     background-color: rgb(37, 37, 37);
-    font-size: 10px;
+    font-size: 12px;
 }
 main-container {
-    width:100%;
-    height:100%;
-    padding: 10px;
+    width: 100%;
+    height: auto;
 }
 
 h3, h4, h5 {
     color: white;
 }
-.section-1 {
-    /*border: 10px solid lightblue;*/
-    height: 230px;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 2%;
-    color: rgb(134, 134, 134);
-    /*flex-direction:column-reverse; */
-}
+
 .headline {
     width: 100%;
     display: flex;
@@ -33,11 +24,20 @@ p {
     margin-bottom: 5px;
 }
 .sub-headline {
-    border: 1px solid white;
+    /* border: 1px solid white; */
     width: 100%;
-    height: 30px;
-    background-color: rgb(134, 134, 134);
+    height: 20px;
+    /* background-color: rgb(134, 134, 134); */
     margin-bottom: 10px;
+    display: inline-flex;
+     /* padding: 1em; */
+}
+#chevron {
+    background-color: rgb(71, 136, 166);
+    margin-right: 1em;
+    font-size: large;
+    color: white;
+    border-radius: 10%;
 }
 
 .sub-headline-2 {
@@ -45,26 +45,38 @@ p {
     flex-direction: column;
     margin-bottom: 5px;
     margin-left: 10px;
+    /* border: .5em solid green; */
 }
+
+.dotted-line {
+    border-top: 1px dotted rgb(134, 134, 134);
+}
+
 #box-1 {
+    /* border: .5em solid green; */
     width: 60%;
     height:125px;
     /* padding: 2%; */
     display: flex;
     flex-direction: wrap;
-    gap: 20px;
+    padding: 0px;
+    text-align: center;
     /* justify-content: center; */
 }
 #box-2 {
+    /* border: .5em solid yellow; */
     width: 40%;
+    align-items: center;
     height: 125px;
     display: flex;
     flex-direction: row;
     gap: 20px;
 }
 #box-3 {
+    /* border: .5em solid red; */
     width: 100vw;
     height: 100px;
+    margin-top: 1em;
 }
 ul {
     list-style-type: none;
@@ -85,34 +97,110 @@ p {
 .list-2 {
     color: rgb(134, 134, 134);
 }
+
+.section-1 {
+    border: .5em solid lightblue;
+    height: auto;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 0px 10%;
+    color: rgb(134, 134, 134);
+}
+
+.parent-section {
+    height: auto;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    padding: 0px 8.75%;
+    border: .5em solid yellow;
+}
+
 .section-2 {
-    width:70%;
+    width: 70%;
     padding: 2%;
+    /* border: .5em solid darkgoldenrod; */
 }
 .section-3 {
     width: 30%;
     padding: 2%;
-}
-.parent-section {
-    display:flex;
-    flex-direction: row;
-    padding: 50;
-}
-.programming-skills {
-    display:flex;
-    flex-direction:column;
-}
-label {
-    display: block;
-}
-#file2 {
-    background: red;
+    /* border: .5em solid lightblue; */
 }
 
+.programming-skills {
+    display:flex;
+    flex-direction: column;
+    color: rgb(134, 134, 134);
+    margin-bottom: 1em;
+}
+#file1::-webkit-progress-value {
+    background-color: rgb(71, 136, 166); 
+  }
+  #file2::-webkit-progress-value {
+    background-color: rgb(49, 140, 215); 
+  }
+  #file3::-webkit-progress-value {
+    background-color: rgb(101, 192, 74); 
+  }
+  #file4::-webkit-progress-value {
+    background-color: rgb(218, 205, 16); 
+  }
+  #file5::-webkit-progress-value {
+    background-color: rgb(231, 39, 29); 
+  }
+label {
+    margin-bottom: .25em;
+}
+progress {
+position: relative;
+width: 100%;
+}
+
+progress::after {
+content: attr(value) '%'; /* Display the value attribute of the progress element followed by '%' */
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+color: white; 
+}
+  
+#file0, #file1, #file2, #file3, #file4, #file5 {
+    margin-bottom: .75em;
+}
+
+.language {
+    color: white;
+}
+.circle-group {
+    display: inline-block;
+    margin-left: 2em;
+}
+.circle {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: rgb(86, 86, 223);
+}
+
+#transparent {
+    background-color: transparent;
+    border: 1px solid rgb(134, 134, 134);
+}
+.language::after {
+    width: 20px;
+    height: 20px;
+    color: blue;
+    border-radius: 50%;
+}
 .graphic-skills, li::marker {
     list-style-type: square;
     margin-left: 15px;
-    color: red;
+    color: rgb(255, 255, 255);
+    margin-bottom: 1em;
+    
 }
 
 .label::after {
@@ -131,5 +219,6 @@ label {
 }
 
 #name-box-1 {
-    margin-left: 50px;
+    padding: 40px 20px 0px 50px;
 }
+

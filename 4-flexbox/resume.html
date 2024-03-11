@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <title>Jaime Antonio Mejia-Beher</title>
     <link rel="stylesheet" href="./resume.css">
     
 </head>
 <body>
-    <div class="main-container">
+    <main class="main-container">
         <div class="section-1">
             <div id="box-1">
                 <div class="name">
@@ -36,46 +37,48 @@
                 </div>
                 <div id="box-3"> Lorem ipsitae anctio quibusdam alias cumque aliquid excepturi temporibus fugiat? Nihil quae labore sint error quos porro at, ipsa velit soluta alias totam minus fuga praesentium suscipit molestias, autem illo nemo voluptatum libero dolorem expedita similique laborum, recusandae magnam. Tempore repellendus ullam aut aliquam iusto culpa, voluptatibus rerum ducimus reiciendis quam, saepe magni. Illum vero doloribus blanditiis numquam placeat quidem rem eaque modi ducimus laboriosam exercitationem accusantium saepe in fugit laudantium repudiandae, similique dolor temporibus? Quia neque corporis accusamus illum rem, iste distinctio non fuga saepe sit, officiis eaque.                       
                 </div>
-            </div><hr>
+            </div>
         </div>
         
         <div class="parent-section">
             <section class="section-2">
-                <div class="sub-headline"><h3>EMPLOYMENT</h3></div>
+                <div class="sub-headline">
+                    <i class="bi bi-chevron-down" id="chevron"></i>
+                    <h3>EMPLOYMENT</h3></div>
                     <div class="headline"> 
                         <div class="sub-headline-2">
                             <h3>There are many varations of passages</h3>
-                            <p>Director of Department</p>
+                            <h6 style="color: rgb(134, 134, 134);">Director of Department</h6>
                         </div>
                         <h3 class="years">2003-2007</h3>
                     </div>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat vel totam sit quasi minima accusantium hic, ipsa fugiat tempora cum. Numquam, vitae! Sed magnam aliquam magni quas molestias provident accusamus!</p>
-                
+                    <div class="dotted-line"></div>
                     <div class="headline">
                         <div class="sub-headline-2">
                             <h3>Copper Union</h3>
-                            <p>Programmer</p>                       
+                            <h6 style="color: rgb(134, 134, 134);">Programmer</h6>                       
                         </div> 
                         <h3 class="years">1999-2001</h3>    
                     </div>
-                <!-- <div class="headline"> -->
+                    
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat vel totam sit quasi minima accusantium hic, ipsa
                         fugiat tempora cum. Numquam, vitae! Sed magnam aliquam magni quas molestias provident accusamus!</p>
                 <!-- </div>  -->
-                <div class="sub-headline"><h3>EMPLOYMENT</h3></div>
+                <div class="sub-headline"><h3>EDUCATION</h3></div>
                     <div class="headline"> 
                         <div class="sub-headline-2">
                             <h3>There are many varations of passages</h3>
-                            <p>Director of Department</p>
+                            <h6 style="color: rgb(134, 134, 134);">Web Design</h6>
                         </div>
                         <h3 class="years">1999-2003</h3>
                     </div>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat vel totam sit quasi minima accusantium hic, ipsa fugiat tempora cum. Numquam, vitae! Sed magnam aliquam magni quas molestias provident accusamus!</p>
-                
+                    <div class="dotted-line"></div>
                     <div class="headline">
                         <div class="sub-headline-2">
                             <h3>Lorem Ipsum is dummy text</h3>
-                            <p>Graphic Design</p>                       
+                            <h6 style="color: rgb(134, 134, 134);">Graphic Design</h6>                       
                         </div> 
                         <h3 class="years">1996-2000</h3>    
                     </div>
@@ -85,20 +88,20 @@
 
             <aside class="section-3">
                 <div class="programming-skills">  
-                    <h4>Programming Skills</h4>
-                    <label for="file1">name</label>
-                    <progress id="file1" value="32" max="100"> 32% </progress>
-                    <label for="file2">Word Press</label>
-                    <progress id="file2" value="90" max="100"> 32% </progress>
-                    <label for="file3">Word Press</label>
-                    <progress id="file3" value="32" max="100"> 32% </progress>
-                    <label for="file4">Word Press</label>
-                    <progress id="file4" value="90" max="100"> 32% </progress>
-                    <label for="file5">Word Press</label>
-                    <progress id="file5" value="90" max="100"> 32% </progress>
+                    <h4 id="file0" style="text-transform: uppercase;">Programming Skills</h4>
+                    <label for="file1">Wordpress</label>
+                    <progress id="file1" value="90" max="100"></progress>
+                    <label for="file2">PHP</label>
+                    <progress id="file2" value="80" max="100"></progress>
+                    <label for="file3">HTML</label>
+                    <progress id="file3" value="93" max="100"></progress>
+                    <label for="file4">CSS</label>
+                    <progress id="file4" value="80" max="100"></progress>
+                    <label for="file5">MySQL</label>
+                    <progress id="file5" value="70" max="100"></progress>
                 </div>
                 <div>
-                    <h5>Graphic Skills</h5>
+                    <h4 style="text-transform: uppercase; margin-bottom: 1em">Graphic Skills</h4>
                     <ul class="graphic-skills">
                         <li id="photoshop">Adobe Photoshop</li>
                         <li id="illustrator">Adobe Illustrator</li>
@@ -108,13 +111,30 @@
                     </ul>
                 </div>
                 <div>
-                    <h5>
+                    <h4 style="text-transform: uppercase; margin-bottom: 1em;">Language Skills</h4>
                     <ul class="image-container">
-                        <span class="label">English</span>
+
+                        <span class="language" style="vertical-align: 25% ;">English</span>
+                        <!-- used vertical-align to center -->
+                        <div class="circle-group">
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle" id="transparent"></div>
+                        </div><br>
+
+                        <span class="language" style="vertical-align: 25% ;">Spanish</span>
+                        <div class="circle-group">
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle" id="transparent"></div>
+                        </div>
                     </ul>
-                    </h5>
                 </div>
             </aside>
         </div>
-    </div>
+    </main>
 </body>
