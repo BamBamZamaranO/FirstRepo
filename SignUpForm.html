@@ -17,8 +17,8 @@
     <section id="contact">
       <div class="container-lg">
         <div class="text-center">
-          <h2>Get in Touch!</h2>
-          <p class="lead">
+          <h2>Get in Touch</h2>
+          <p class="questions">
             Questions to ask? Fill out the form to contact us directly
           </p>
         </div>
@@ -37,6 +37,15 @@
               <label for="name" class="form-label">Name:</label>
               <input type="text" class="form-control" id="name" placeholder="e.g. Lucas">
               
+              <label for="subject" class="form-label">What is your question about?</label>
+              <select id="suject" class="form-select">
+                <option value="pricing" selected>Pricing</option>
+                <option value="content">Content</option>
+                <option value="other">Other</option>
+              </select>
+
+              <label for="message" class="form-label">Message</label>
+              <textarea id="message" class="form-control" style="height: 80px;"></textarea>
             </form>
           </div>
         </div>
