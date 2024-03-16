@@ -1,0 +1,28 @@
+
+h2 {
+    text-transform: capitalize;
+}
+
+.border {
+    border: 1rem solid blue;
+}
+
+.visualize-header {
+    background-color: rgb(239, 227, 204);
+}
+
+#hover-1{
+    transition-duration: 1s;
+  }
+
+#hover-1:hover {
+    width: 150px; 
+    height: 150px; 
+  }
+
+  #slide {
+    transition-duration: 1s;
+  }
+  #slide:hover {
+    transform: translateX(600px);
+  }
