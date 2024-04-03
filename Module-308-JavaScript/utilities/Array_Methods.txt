@@ -1,0 +1,54 @@
+flat() used to flatten an array by removing nested arrays. Passing no arguments (leaving () blank) flattens the array by one level.
+
+concat() 1) usefeul to combine arrays, arrays of objects etc 2) Creates a new array instead of mutating the original. 3) CHAINING - 
+    used to chain with other array methods to perform complex operations like map() or filter(). 4) PARAMETER FLEXIBILITY - accepts 
+    multiple arguments, not just arrays. You can pass individual elements or arrays as arguments to 'concat()'. 
+
+splice() returns an array with the removed elements as in the example below. In order to replace values you must add a third parameter
+
+findIndex() was used to find the first object in the array where the 'name' property matched. Could not use indexOf b/c its an object 
+    It accepts a callback function as an argument, which is executed for each element of the array until it returns true.
+    It's particularly useful when dealing with arrays of objects or when you need to find an element based on some condition other than 
+    strict equality.
+
+indexOf() the main difference is in how they search for elements: indexOf is for simple value comparison and returns the index of the 
+    first occurrence, while findIndex is for searching based on a condition and returns the index of the first element that satisfies 
+    that condition. It returns the index of the first occurrence of a specified value within the array, or -1 if the value is not found.
+    It uses strict equality (===) to compare elements, so it won't work as expected for objects or other complex types unless they are 
+    the same instance.
+
+filter() Does not modify orginial array but creates new array with all elements that passed a certain test implemented by the function
+
+map function returns a new array with the results applied by the callback function
+
+reduce()  iterates over and updates an accumulator value returning a single value
+
+find() function iterates over each element and returns the element that meets the condition. If no element is satisfied >> 'undefined'
+
+forEach() - doesn't return a value nor changes existing array but allows us to iterate over the array
+
+sort()
+
+the some() will iterate over each element and returns 'true' for the whole array if any one element satisfies the condition
+
+toString() to convert the array into a string with no way to add comas or spaces.
+
+join() method is used to join all elements in an array into a single string. It concatenates each element of the array using a 
+    specified separator and returns the resulting string. BUT!! this will not be enought to join an array of Objects. You will need
+    to use map() to extract the 'name' property from each object in the array resulting in a NEW array containing just the names. 
+    THEN use join() 
+
+includes() Useful when you want to check if a specific element exists in an array and you don't need to know its index.
+    In this example the 'includes()' will not work because it executes using ('===') meaning its look for a standalone element in the 
+    array, not as a property value of the ojbects. In this case to find out if any object in the array primos has and 'age' property 
+    with the value '38', I would need to iterate over the array and manually check each objects 'age' property. You should use methods 
+    like 'some()' or 'find()' for this. 
+
+every() will iterate over each element and returns 'true' for the whole array if all values/element satisfies the condition.
+    Useful: 1) VALIDATION - to validate an array and make sure all elements meet specific criteria. IE use to validate user input or 
+    to check if all elements in array are within certain range. 2) CONDITIONAL LOGIC - to perform conditional logic based on elements 
+    of an array. IE use to determine if all numbers in an array are positive or if all strings meet a certain length requirement. 
+    3) ERROR HANDLING - to perform error handling or data consistency checks. IE you can use it to ensure that all elements in an array 
+    are of the expected data type before proceeding with further processing. 4) PREDICATE FUNCTIONS - used in combination with predicate 
+    functions to filter or transform array. By checking if every element satisfies a condition, you can determine whether to preform 
+    additional operations on the array.
