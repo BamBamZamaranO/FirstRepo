@@ -147,10 +147,10 @@ const CourseInfo = {
 
 // Thirst attempt to obtain scores categorized for each student. Destructuring...
 const [s47, s150] = submissions;
-const learner125scorse = [s47.score, s150.score]  // learner125scorse = [47, 150]
+const learner125score = [s47.score, s150.score]  // learner125score = [47, 150]
 
 const [ , , , s39, s140] = submissions
-const learner132score = [s39.score, s140.score]  // learner132scorse = [ 39, 140 ]
+const learner132score = [s39.score, s140.score]  // learner132score = [ 39, 140 ]
 
                                           // discarded logic from first attempt
                                                               // console.log(score140) 
@@ -163,39 +163,71 @@ const learner132score = [s39.score, s140.score]  // learner132scorse = [ 39, 140
                                                               // let weightedAverage_2 = iD_2TotalScore/totalPtsPossible
                                                             // console.log(weightedAverage_1)
 
-// let cCourseInfo = [125, 132]
+
 // let aAssignmentGroup = [0.985, 0.82]
-// let lLearnerSubmissions = [ [0.94, 1.0] , [0.78, 0.833] ]
+// let lLearnerSubmissions = 
                                                          
 // ptsPossible = [50, 150]
-// learner125scorse = [ 47, 150 ]
-// learner132scorse = [ 39, 140 ]
-let lrnr125pctg = []                                      // [ 0.94, 1 ]
-for (let i=0; i < learner125scorse.length; i++) {
-  lrnr125pctg.push(learner125scorse[i] / ptsPossible[i]);
+// learner125score = [ 47, 150 ]
+// learner132score = [ 39, 140 ]
+
+
+const lrnr125pctg = []                                      // [ 0.94, 1 ]
+for (let i=0; i < learner125score.length; i++) {
+  lrnr125pctg.push(learner125score[i] / ptsPossible[i]);
 }
 
-let lrner132pctg = []                                     // [ 0.78, 0.9333333333333333 ]
+// console.log(learner125)
+const lrner132pctg = []                                     // [ 0.78, 0.93 ]
 for (let i=0; i < learner132score.length; i++) {
   lrner132pctg.push(learner132score[i] / ptsPossible[i]);
 }
-studentpctgs = lrnr125pctg, lrner132pctg
-console.log(studentpctgs)
 
-function getLearnerData(course, ag, submissions) {      // Creates array of objects
-   let arrOfObj = []                                    
-   for (let i = 0; i < cCourseInfo.length; i++) {
-    let obj = {                                         // creates each object; equal to the # of arguments
-        id: course[i], 
-        avg: ag[i],
-        submissions: submissions[i]
-    }
-        arrOfObj.push(obj);
-   }    return arrOfObj
+
+// console.log(learner132)
+// sum and divide function
+function calcSum(arr) {
+  return arr.reduce((total, currItem) => {
+    return total + currItem;
+  }) 
+}                   
+
+let lrner125total = calcSum(learner125score)   // 197
+let lrner132total = calcSum(learner132score)   // 179
+let totalPts = calcSum(ptsPossible)            // 200 
+  
+let bothSTDtotals = [lrner125total, lrner132total]    // [ 197, 179 ]
+
+function divideTotals(student, ptsPossible) {
+  return student.map(student => student/ptsPossible)
 }
-// console.log(getLearnerData())
+const courseInfo = [125, 132]
+const avgScores = divideTotals(bothSTDtotals, totalPts)   // [ 0.985, 0.895 ]
+const learnerScores = [lrnr125pctg, lrner132pctg]  
+// console.log(avgScores)
 
-    //you can make mulitpole functions to help complete the task
+function calculatePercentage(scores, totalPossible) {
+  return scores.map(score => score / totalPossible);
+}
+
+function getLearnerData(course, ag, submission) {      // Creates array of objects
+   let arrOfObj = []    
+   for (let i = 0; i < courseInfo.length; i++) {
+    arrOfObj.push({                                         // creates each object; equal to the # of arguments
+        id: courseInfo[i], 
+        avg: avgScores[i],
+        submissions: learnerScores[i]
+    });
+   } 
+   return arrOfObj;
+  }    
+
+    
+let results = getLearnerData(courseInfo, avgScores, learnerScores)
+console.log(results)
+
+
+//you can make mulitpule functions to help complete the task
 
   //   const result = [
   //     {
@@ -213,4 +245,4 @@ function getLearnerData(course, ag, submissions) {      // Creates array of obje
   //   ];
    
   //   return result;
-  // }
+  // 
