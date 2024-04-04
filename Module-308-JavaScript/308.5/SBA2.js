@@ -186,4 +186,30 @@ console.log(currentDate)
 
   const result = calculateWeightedAverage(CourseInfo, AssignmentGroups, LearnerSubmissions);
   // console.log(result);
-  
+  function getLearnerData(course, ag, submissions1, submissions2) {
+    let arrOfObj = [];
+    // Check if all arrays have the same length
+    if (course.length !== ag.length || course.length !== submissions1.length || course.length !== submissions2.length) {
+        throw new Error("Arrays have different lengths");
+    }
+    for (let i = 0; i < course.length; i++) {
+        let obj = {
+            id: course[i],
+            avg: ag[i],
+            submissions: [submissions1[i], submissions2[i]] // Array of submissions
+        };
+        arrOfObj.push(obj);
+    }
+    return arrOfObj;
+ }
+ 
+ // Sample data
+//  const courseInfo = [125, 132];
+//  const avgScores = [0.985, 0.895];
+//  const lrnr125pctg = [0.94, 1.0];
+//  const lrner132pctg = [0.78, 0.833];
+ 
+ // Call the function
+ let results = getLearnerData(courseInfo, avgScores, lrnr125pctg, lrner132pctg);
+ console.log(results);
+ 
